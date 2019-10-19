@@ -1,0 +1,33 @@
+.footer {
+  background: #f2f2f2;
+  .title {
+    small {
+      font-size: 0.7rem;
+    }
+  }
+  .description {
+    span {
+      font-size: 0.9rem;
+    }
+  }
+  .about-me {
+    font-size: 0.8rem;
+    .title {
+      font-style: italic;
+    }
+  }
+}
+
+.copyright {
+  max-width: 900px;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 98%;
+  a {
+    font-weight: normal;
+    color: #0000ee;
+    cursor: hand;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,41 @@
+<footer class="footer">
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-around">
+      <div class="col-7 col-md-5">
+        <h5 class="title">
+          {{ appConfig.appTitle }}
+          <small>Version: {{ appConfig.appVersion }}</small>
+        </h5>
+        <p class="description">
+          Tools: <span>{{ appConfig.tools }}</span>
+        </p>
+      </div>
+      <div class="col-3">
+        About Me:
+        <ul class="list-unstyled about-me">
+          <li>
+            {{ appConfig.author.name }} |
+            <span class="title">
+              {{ appConfig.author.title }}
+            </span>
+          </li>
+          <li>
+            {{ appConfig.author.email }}
+          </li>
+          <li>
+            <a class="footerlink" target="_blank" [href]="appConfig.author.url">
+              {{ appConfig.author.url }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-12">
+        <div class="copyright">
+          © 2019
+          <a href="https://slock.it" target="_blank">Slock.it</a>
+          GmbH - A Blockchains Company - All rights reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

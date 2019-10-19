@@ -19,7 +19,7 @@ export class Web3ConfigService {
         .toPromise()
         .then(data => {
           Web3ConfigService.settings = data as EnsContract;
-          console.log(Web3ConfigService.settings);
+          // console.log(Web3ConfigService.settings);
           resolve();
         })
         .catch((error: any) => {

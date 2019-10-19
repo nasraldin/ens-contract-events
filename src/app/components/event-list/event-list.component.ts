@@ -1,8 +1,6 @@
-import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContractEvent } from '../../models/contract-event.model';
-import { Web3ConfigService } from '../../services/web3-config.service';
-import Web3 from 'web3';
-import { Contract } from 'web3-eth-contract';
+import { Web3Service } from '../../services/web3.service';
 
 @Component({
   selector: 'app-event-list',
@@ -11,20 +9,16 @@ import { Contract } from 'web3-eth-contract';
   providers: []
 })
 export class EventListComponent implements OnInit {
-  model: ContractEvent[];
-  web3: Web3;
-  contract: Contract;
+  eventsModel: ContractEvent[];
 
-  constructor() {}
+  constructor(private service: Web3Service) {}
 
   ngOnInit() {
-    this.web3 = new Web3(Web3ConfigService.settings.networks[0].provider);
-    this.contract = new this.web3.eth.Contract(
-      Web3ConfigService.settings.abi,
-      Web3ConfigService.settings.networks[0].address
-    );
+    this.fetchEvents();
+  }
 
-    console.log('web3', this.web3);
-    console.log('contract', this.contract);
+  async fetchEvents() {
+    this.eventsModel = await this.service.getPastEvents(24);
+    console.log('Model: ', this.eventsModel);
   }
 }

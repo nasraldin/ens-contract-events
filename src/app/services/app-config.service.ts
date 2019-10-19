@@ -19,7 +19,7 @@ export class AppConfigService {
         .toPromise()
         .then(data => {
           AppConfigService.settings = data as AppConfig;
-          console.log(AppConfigService.settings);
+          // console.log(AppConfigService.settings);
           resolve();
         })
         .catch((error: any) => {

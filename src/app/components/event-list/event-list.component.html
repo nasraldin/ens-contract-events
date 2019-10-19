@@ -34,7 +34,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let event of model | async; let _i = index">
+        <tr *ngFor="let event of eventsModel; let _i = index">
           <th scope="row">{{ _i }}</th>
           <td>
             <ngb-highlight [result]="event.name"></ngb-highlight>

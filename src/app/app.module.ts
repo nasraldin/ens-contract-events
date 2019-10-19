@@ -11,9 +11,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppConfigService } from './services/app-config.service';
 import { AppErrorHandler } from './app-error.handler';
+import { Web3ConfigService } from './services/web3-config.service';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    EventListComponent
+  ],
   imports: [
     BrowserModule,
     CommonModule,
@@ -31,6 +38,13 @@ import { AppErrorHandler } from './app-error.handler';
       deps: [AppConfigService],
       multi: true
     },
+    Web3ConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeWeb3,
+      deps: [Web3ConfigService],
+      multi: true
+    },
     { provide: ErrorHandler, useClass: AppErrorHandler }
   ],
   bootstrap: [AppComponent]
@@ -39,5 +53,10 @@ export class AppModule {}
 
 // The entry point of app initializations
 export function initializeApp(appConfig: AppConfigService) {
+  return () => appConfig.load();
+}
+
+// initializations of web3
+export function initializeWeb3(appConfig: Web3ConfigService) {
   return () => appConfig.load();
 }

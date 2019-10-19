@@ -1,5 +1,5 @@
 {
-  "name": "ens-contract-events",
+  "name": "@nasraldin/ens-contract-events",
   "version": "0.0.1",
   "description": "Reading a list of the ENS contract events of the past (e.g. the last 1 or 2 days) focussing in particular on the event for registered names",
   "author": {
@@ -8,7 +8,7 @@
     "email": "nasr2ldin@gmail.com",
     "url": "http://www.nasreldin.net"
   },
-  "repository": "https://github.com/codezero/codezero.git",
+  "repository": "git://github.com/nasraldin/ens-contract-events.git",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -18,7 +18,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.9",
     "@angular/common": "~8.2.9",
@@ -55,5 +55,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

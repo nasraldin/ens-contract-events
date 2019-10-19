@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AppConfig } from '../models/app-config.model';
+import { EnsContract } from '../models/ens-contract.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AppConfigService {
-  static settings: AppConfig;
+export class Web3ConfigService {
+  static settings: EnsContract;
 
   constructor(private http: HttpClient) {}
 
-  load(): Promise<any> {
-    const jsonFile = `assets/config/app-config.dev.json`;
+  load(): Promise<EnsContract> {
+    const jsonFile = `assets/config/ens-contract.json`;
 
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<EnsContract>((resolve, reject) => {
       this.http
         .get(jsonFile)
         .toPromise()
         .then(data => {
-          AppConfigService.settings = data as AppConfig;
-          // console.log(AppConfigService.settings);
+          Web3ConfigService.settings = data as EnsContract;
+          // console.log(Web3ConfigService.settings);
           resolve();
         })
         .catch((error: any) => {

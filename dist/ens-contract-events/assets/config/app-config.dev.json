@@ -1,0 +1,15 @@
+{
+  "env": "dev",
+  "appTitle": "ENS Contract Events",
+  "appVersion": "0.0.1",
+  "appDescription": "Reading a list of the ENS contract events of the past (e.g. the last 1 or 2 days) focussing in particular on the event for registered names",
+  "companyUrl": "https://slock.it",
+  "companyLogo": "https://slock.it/wp-content/uploads/2019/05/slockit_logo.svg",
+  "author": {
+    "name": "Nasr Eldin Mohamed",
+    "title": "Software Engineer",
+    "email": "nasr2ldin@gmail.com",
+    "url": "https://www.linkedin.com/in/nasreldin"
+  },
+  "tools": "Angular, web3, in3, ethereum-ens, bootstrap"
+}

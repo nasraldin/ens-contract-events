@@ -6,7 +6,7 @@
   <hr class="my-4" />
   <ul>
     <li>an observable async service to fetch a list of events</li>
-    <li>sorting, filtering and pagination</li>
+    <li>filtering and pagination</li>
     <li>simulated delay and loading indicator</li>
     <li>debouncing of search requests</li>
   </ul>
@@ -66,15 +66,17 @@
           </td>
           <td>
             <ngb-highlight
-              [ngbTooltip]="event.expires"
-              [result]="hexToNumber(event.expires)"
+              ngbTooltip="hex: {{ event.expires }},
+              timestamp: {{ hexToNumber(event.expires) }}"
+              [result]="unixTimestamp(hexToNumber(event.expires))"
               [term]="searchQuery"
             ></ngb-highlight>
           </td>
           <td>
             <ngb-highlight
-              [ngbTooltip]="event.cost"
-              [result]="hexToNumberString(event.cost)"
+              ngbTooltip="hex: {{ event.cost }},
+              wei: {{ hexToNumberString(event.cost) }}"
+              [result]="toEther(hexToNumberString(event.cost)) + ' ether'"
               [term]="searchQuery"
             ></ngb-highlight>
           </td>

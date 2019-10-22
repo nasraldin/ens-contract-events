@@ -21,8 +21,10 @@ export class EventListComponent implements OnInit {
 
   // convert helpers
   substring = ConvertHelper.substringTo26Chart;
+  unixTimestamp = ConvertHelper.unixTimestamp;
   hexToNumber = ConvertHelper.hexToNumber;
   hexToNumberString = ConvertHelper.hexToNumberString;
+  toEther = ConvertHelper.toEther;
 
   constructor(public service: Web3Service) {}
 

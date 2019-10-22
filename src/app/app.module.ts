@@ -15,6 +15,7 @@ import { Web3ConfigService } from './services/web3-config.service';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './pipe/string-filter.pipe';
+import { AboutTaskComponent } from './components/about-task/about-task.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilterPipe } from './pipe/string-filter.pipe';
     HeaderComponent,
     FooterComponent,
     EventListComponent,
-    FilterPipe
+    FilterPipe,
+    AboutTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,206 @@
+<div class="container">
+  <div class="text-center">
+    <h1>
+      ENS Contract Events <span class="small about-auth"> by: Nasr Eldin</span>
+    </h1>
+  </div>
+  <h3>
+    Task Overview
+  </h3>
+  <p class="mb-0">
+    We Need to investigate or list the ENS contract events of the past days. So,
+    we will write a MVP (minimum viable product) DApp to get a list of the ENS
+    contract events of the past (e.g. the last 1 or 2 days) focusing on the
+    event for registered names.
+  </p>
+  <p class="font-weight-bold">
+    NameRegistered (string name, bytes32 label, address owner, uint256 cost,
+    uint256 expires)
+  </p>
+  <p>
+    <a
+      target="_blank"
+      href="https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20%20SRS%20v%200.1.docx"
+    >
+      SRS
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20SIs%20v.0.1.docx"
+    >
+      SIS
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/nasraldin/ens-contract-events/blob/master/Docs/Client%20App%20Wireframe.png"
+    >
+      Wireframe
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Use%20Case%20Diagram.png"
+    >
+      Case Diagram
+    </a>
+    <a
+      target="_blank"
+      href="https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Events.drawio"
+    >
+      draw file
+    </a>
+    view by <a target="_blank" href="https://draw.io"> draw.io</a>
+  </p>
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Terminology</h4>
+
+    <h5 class="ml-3">
+      ENS
+    </h5>
+    <p class="mb-0 ml-3">
+      ENS is the Ethereum Name Service, a distributed, open, and extensible
+      naming system based on the Ethereum blockchain.
+    </p>
+    <p class="mb-0 ml-3">
+      The ENS offers a secure and decentralised way to address resources both on
+      and off the blockchain using simple, human-readable names.
+    </p>
+    <p class="ml-3">
+      Detailed information you can find on the project’s internet page:
+      <a href="https://docs.ens.domains" target="_blank"
+        >https://docs.ens.domains</a
+      >
+    </p>
+
+    <h5 class="ml-3">
+      DApp
+    </h5>
+    <p class="mb-0 ml-3">
+      A decentralized application (DApp, dApp, Dapp, or dapp) is a computer
+      application that runs on a distributed computing system. DApps have been
+      mostly popularized by distributed ledger technologies (DLT), namely the
+      Ethereum Blockchain, where DApps are often referred to as smart contracts.
+    </p>
+    <p class="ml-3">
+      DApps may run on top of distributed computing systems such as Ethereum or
+      Bitcoin. Decentralized applications are stored on and executed by a
+      Blockchain system.
+    </p>
+
+    <h5 class="ml-3">
+      Ethereum address
+    </h5>
+    <p class="ml-3">
+      Is simply a 64-character hex string generated subject to various rules
+      defined in the Ethereum yellow paper.
+    </p>
+
+    <h5 class="ml-3">
+      Smart Contract
+    </h5>
+    <p class="ml-3">
+      A smart contract is a computer protocol intended to digitally facilitate,
+      verify, or enforce the negotiation or performance of a contract.
+    </p>
+  </div>
+  <hr />
+  <h3>
+    Scope of Work
+  </h3>
+  <p class="mb-0">
+    Display contract events for past 1,2 days in the table UI and can search,
+    filter, sort events with pagination.
+  </p>
+  <p class="mb-0">
+    For more info about project stories and status you can visit link porject
+    dashboard
+  </p>
+  <p>
+    <a
+      href="https://github.com/nasraldin/ens-contract-events/projects/1"
+      target="_blank"
+    >
+      https://github.com/nasraldin/ens-contract-events/projects/1
+    </a>
+  </p>
+
+  <div class="alert alert-dark" role="alert">
+    <p>
+      Initially, we planned to implement this set of features to be simple yet
+      useful:
+    </p>
+    <hr />
+    <ul>
+      <li>
+        Store ABI, address, provider records in the json and load contract info
+        within app initialize.
+      </li>
+      <li>
+        Quickly switch between networks: Mainnet/Ropsten/etc or your own
+        localhost testnet.
+      </li>
+      <li>
+        Client app interact with smart contract and get past events from
+        contract.
+      </li>
+      <li>User-friendly search within contract events</li>
+      <li>Simple & short steps to view events</li>
+      <li>Excellent performance</li>
+    </ul>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    <h5 class="ml-3">
+      Development process
+    </h5>
+    <hr />
+    <ul>
+      <li>
+        Clean code.
+      </li>
+      <li>
+        We use some of the DevOps principles for Continuous Integration (CI),
+        Continuous Delivery (CD).
+        <p>
+          CD automates the release process building on the automated testing in
+          CI so that new builds can be released at detecting staging prod
+          release from repository pushed this will push to an azure pipeline to
+          valid release and make sure the build is valid and tested for
+          deploying to production
+        </p>
+        <p>
+          <a
+            href="https://nasraldin.visualstudio.com/ENS-Contract-Events/_build"
+          >
+            Azure DevOps Pipelines for our test app
+          </a>
+        </p>
+        <p>
+          <a href="https://github.com/nasraldin/ens-contract-events/actions">
+            Github repository actions
+          </a>
+        </p>
+        <p>
+          <a href="https://ens-contract-events-test.azurewebsites.net">
+            Demo from azure pipeline
+          </a>
+          automation build from prod stag
+        </p>
+      </li>
+      <li>
+        We provide 3 branches staging releases in our project for release test
+        app. master for stable and tested, dev for development stag, prod for
+        deploying to production.
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <h3>
+    Interact With Ethereum Smart Contracts
+  </h3>
+
+  <img
+    [src]="interactWithContract"
+    alt="Interact With Ethereum Smart Contracts"
+    class="img-thumbnail mt-3"
+  />
+</div>

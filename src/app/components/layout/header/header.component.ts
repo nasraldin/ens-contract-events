@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppConfigService } from 'src/app/services/app-config.service';
-import { AppConfig } from 'src/app/models/app-config.model';
+import { AppConfigService } from '../../../services/app-config.service';
+import { AppConfig } from '../../../models/app-config.model';
 
 @Component({
   selector: 'app-header',

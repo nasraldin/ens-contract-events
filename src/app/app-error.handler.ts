@@ -7,7 +7,7 @@ export class AppErrorHandler extends ErrorHandler {
   }
 
   handleError(error: any) {
-    console.log(error);
+    console.error(error);
 
     if (
       confirm(

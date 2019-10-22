@@ -102,7 +102,8 @@ export class Web3Service {
                     label: element.returnValues.label,
                     owner: element.returnValues.owner,
                     expires: element.returnValues.expires._hex,
-                    cost: element.returnValues.cost._hex
+                    cost: element.returnValues.cost._hex,
+                    itemOrder: Number(key) + 1
                   });
                 }
               }

@@ -13,13 +13,16 @@ import { AppConfigService } from './services/app-config.service';
 import { AppErrorHandler } from './app-error.handler';
 import { Web3ConfigService } from './services/web3-config.service';
 import { EventListComponent } from './components/event-list/event-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from './pipe/string-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    EventListComponent
+    EventListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { EventListComponent } from './components/event-list/event-list.component
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [
     AppConfigService,

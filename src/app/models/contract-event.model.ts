@@ -4,4 +4,5 @@ export interface ContractEvent {
   owner?: any;
   expires?: any;
   cost?: any;
+  itemOrder?: any;
 }

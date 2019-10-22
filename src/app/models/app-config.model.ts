@@ -10,6 +10,7 @@ export class AppConfig {
     title: string;
     email: string;
     url: string;
+    linkedIn: string;
   };
   tools?: string;
 }

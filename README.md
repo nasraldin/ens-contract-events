@@ -1,6 +1,8 @@
-# EnsContractEvents
+# ENS Contract Events
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+
+[Demo](https://ens-contract-events-test.azurewebsites.net).
 
 ## Development server
 

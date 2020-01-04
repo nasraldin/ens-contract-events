@@ -10,6 +10,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 [Case Diagram](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Use%20Case%20Diagram.png) 
 [draw file](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Events.drawio) view by draw.io
 
+For more info about project stories and status you can visit link porject dashboard
+https://github.com/nasraldin/ens-contract-events/projects/1
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

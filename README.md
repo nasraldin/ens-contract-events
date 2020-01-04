@@ -2,11 +2,11 @@
 
 [Demo](https://ens-contract-events-test.azurewebsites.net).
 
-[SRS](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20%20SRS%20v%200.1.docx) 
-[SIS](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20SIs%20v.0.1.docx) 
-[Wireframe](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/Client%20App%20Wireframe.png) 
-[Case Diagram](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Use%20Case%20Diagram.png) 
-[draw file](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Events.drawio) view by draw.io
+- [SRS](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20%20SRS%20v%200.1.docx) file
+- [SIS](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20SIs%20v.0.1.docx) file
+- [Wireframe](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/Client%20App%20Wireframe.png) 
+- [Case Diagram](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Use%20Case%20Diagram.png) 
+- [draw file](https://github.com/nasraldin/ens-contract-events/blob/master/Docs/ENS%20Contract%20Events.drawio) view by draw.io
 
 For more info about project stories and status you can visit link porject dashboard
 https://github.com/nasraldin/ens-contract-events/projects/1
